@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>My CV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,15 +12,15 @@
             padding: 0;
             background-color: #f0f0f0;
             color: #333;
+            text-align: center;
         }
 
         header {
-            
             background-color: #007bff;
             color: #fff;
-            text-align: center;
             padding: 1rem 0;
         }
+
         h1, button {
             font-size: 24px;
             margin: 0;
@@ -43,42 +43,52 @@
             color: #fff;
         }
 
-        section {
-            padding: 2rem;
-            text-align: center;
-        }
+        /* Your existing styles here */
 
         img {
-            border-radius: 50%;
-            max-width: 200px;
+            max-width: 100%;
             height: auto;
         }
 
-        .about-me-text {
+        .cv-container {
             max-width: 600px;
             margin: 0 auto;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-button {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <header>
         <a href="../index.html"><button>Back</button></a>
-        <h1>About Me</h1>
+        <h1>Here is my CV</h1>
+        
     </header>
 
-    <section>
-        <img src="Gradpic.jpg" alt="Your Name">
-        <div class="about-me-text">
-            <h2>Carlo D.V. Mendoza</h2>
-            <p>
-                Welcome to my personal portfolio!
-            </p>
-            <p>
-                I'm an IT Student with experience in C, C#, Lua and 3d Modeling using 
-                Blendr software
-            </p>
-           
-        </div>
-    </section>
+    <div class="cv-container">
+        <img src="CMendoza_CV.jpg" alt="Your CV">
+        <p>Click the button below to download the CV:</p>
+        <a href="CMendoza_CV.jpg" download class="download-button">
+            <button>Download CV</button>
+        </a>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
 </body>
 </html>
